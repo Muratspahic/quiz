@@ -1,0 +1,55 @@
+{
+  "accommodation": [
+    {
+      "name": "Scenic view",
+      "image": "https://i0.wp.com/citymagazine.si/wp-content/uploads/2023/02/burano-venice-italy-colorful-buildings-along-can-2022-08-25-19-40-56-utc.jpg?resize=1400%2C933&ssl=1",
+      "price": "$770"
+    },
+    {
+      "name": "Quaint",
+      "image": "https://happytravelbn.com/images/bookingengine/e/30/368dc2248f4646e962bd18b5641501a9.jpg",
+      "price": "$550"
+    },
+    {
+      "name": "Pisa",
+      "image": "https://cdnuploads.aa.com.tr/uploads/Contents/2020/04/02/thumbs_b_c_9be72fa1975723067f5a05d61fb0776f.jpg?v=165004",
+      "price": "$400"
+    }
+  ],
+
+  "transport": [
+    {
+      "name": "Luxury",
+      "image": "https://static.mondo.ba/Picture/586164/jpeg/avion.jpeg?ts=2022-09-21T12:25:39",
+      "price": "$600"
+    },
+    {
+      "name": "Public transport",
+      "image": "https://sarajevo.travel/assets/photos/texts/extra-big/public-city-transport-is-in-function-again-1589529314.jpg",
+      "price": "$450"
+    },
+    {
+      "name": "Private transport",
+      "image": "https://www.topgear.com/sites/default/files/2023/06/AudiRS6Avant%20performance_Dewsilver_matt071.jpg",
+      "price": "$800"
+    }
+  ],
+
+  "food": [
+    {
+      "name": "Traditional",
+      "image": "https://public.flourish.studio/uploads/1216465/948d68c7-6560-4cec-9d80-2193d97fb16a.jpg",
+      "price": "$200"
+    },
+    {
+      "name": "Restaurant food",
+      "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/26/5b/f5/f9/apetit-restoran.jpg?w=600&h=-1&s=1",
+      "price": "$600"
+    },
+    {
+      "name": "Street food",
+      "image": "https://image.dnevnik.hr/media/images/920x695/Oct2022/62396214-kebab-turska-istanbul.jpg",
+      "price": "$800"
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+.transport {
+  border: none;
+  text-align: center;
+  padding-top: 40px;
+  background: #F9ECF2;
+  border-radius: 20px;
+
+  @media (min-width: 992px){
+    border-radius: 0;
+  }
+
+  &__wrapper {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-direction: column;
+
+    @media (min-width: 992px){
+    flex-direction: row;
+    }
+  }
+
+  &__icon {
+    height: 60px;
+    width: 26px;
+  }
+
+
+  h2 {
+    text-align: center;
+  }
+
+  &__card-info {
+      width: 100%;
+      cursor: pointer;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 20px;
+    }
+
+
+  &__options {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 20px;
+    margin-top: -50px;
+    padding: 20px;
+    z-index: 1;
+    position: relative;
+
+  }
+
+
+  &__button-select {
+    padding:20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px 20px 0px 0px;
+    width: 100%;
+  }
+}
+
+
+  // .selected-icon {
+  //   position: absolute;
+  //   top: 50%;
+  //   left: 50%;
+  //   transform: translate(-50%, -90%);
+  //   z-index: 1;
+  //   height: 56px;
+  //   width: 56px;
+  // }
+
+  // .overlay {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 100%;
+  //   background-color: rgba(0, 0, 0, 0.5);
+  //   display: none;
+  // }
+
+  // .selected .overlay {
+  //   display: block;
+  // }
+
+
+  // &__card-info.selected .overlay {
+  //   display: block;
+  // }
+
+  // &__card-info.overlay.selected-icon{
+  //   display: none;
+  // }
