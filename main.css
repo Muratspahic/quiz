@@ -6,12 +6,14 @@
 
 * {
   font-family: "Ubuntu";
+  margin: 0;
 }
 
 p {
   size: 16px;
   line-height: 26px;
   font-weight: 400;
+  margin-bottom: 40px;
 }
 
 span {
@@ -28,17 +30,18 @@ button {
 
 .start {
   background: whitesmoke;
-  margin-bottom: 20px;
   border-radius: 20px;
 }
 @media (min-width: 992px) {
   .start {
     border-radius: 0;
-    margin-bottom: 20px;
   }
 }
 .start__wrapper {
-  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
 }
 .start__wrapper h1 {
   text-align: center;
@@ -57,9 +60,6 @@ button {
   border-radius: 20px 20px 0px 0px;
   width: 100%;
 }
-.start__intro-screen {
-  margin-bottom: 80px;
-}
 
 .hidden {
   display: none;
@@ -69,13 +69,10 @@ button {
   text-align: center;
   background: #ECF0F9;
   border-radius: 20px;
-  padding-top: 40px;
-  margin-bottom: 20px;
 }
 @media (min-width: 992px) {
   .hero {
     border-radius: 0;
-    margin-bottom: 20px;
   }
 }
 .hero__wrapper {
@@ -135,10 +132,16 @@ button {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 20px;
+  display: none;
 }
 .hero .overlay.active {
   display: block;
   position: absolute;
+}
+@media (min-width: 992px) {
+  .hero .overlay.active {
+    position: absolute;
+  }
 }
 .hero .selected-icon {
   position: absolute;
@@ -150,6 +153,9 @@ button {
   width: 40px;
   display: block;
 }
+.hero .selected {
+  color: blue;
+}
 
 .hidden {
   display: none;
@@ -158,10 +164,8 @@ button {
 .transport {
   border: none;
   text-align: center;
-  padding-top: 40px;
   background: #F9ECF2;
   border-radius: 20px;
-  margin-bottom: 20px;
 }
 @media (min-width: 992px) {
   .transport {
@@ -222,10 +226,21 @@ button {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 20px;
+  display: none;
+}
+@media (min-width: 992px) {
+  .transport .overlay {
+    position: absolute;
+  }
 }
 .transport .overlay.active {
   display: block;
   position: absolute;
+}
+@media (min-width: 992px) {
+  .transport .overlay.active {
+    position: absolute;
+  }
 }
 .transport .selected-icon {
   position: absolute;
@@ -239,9 +254,6 @@ button {
   height: 40px;
   width: 40px;
 }
-.transport .selected {
-  color: blue;
-}
 
 .hidden {
   display: none;
@@ -250,7 +262,6 @@ button {
 .food {
   border: none;
   text-align: center;
-  padding-top: 40px;
   background: #E1ECD3;
   border-radius: 20px;
 }
@@ -326,10 +337,21 @@ button {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 20px;
+  display: none;
+}
+@media (min-width: 992px) {
+  .food .overlay {
+    position: absolute;
+  }
 }
 .food .overlay.active {
   display: block;
   position: absolute;
+}
+@media (min-width: 992px) {
+  .food .overlay.active {
+    position: absolute;
+  }
 }
 .food .selected-icon {
   position: absolute;

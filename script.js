@@ -31,11 +31,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     cardInfos.forEach(cardInfo => {
       cardInfo.addEventListener('click', () => {
-        document.querySelectorAll('.hero__options, .transport__options, .food__options').forEach(option => {
+        document.querySelectorAll('.hero__options').forEach(option => {
           option.classList.remove('selected');
         });
 
-        cardInfo.querySelector('.hero__options, .transport__options, .food__options').classList.add('selected');
+        cardInfo.querySelector('.hero__options').classList.add('selected');
       });
     });
 
@@ -64,6 +64,23 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+  const transportCards = document.querySelectorAll('.transport__card-info, .food__card-info');
+
+  transportCards.forEach(card => {
+      card.addEventListener('click', function() {
+          transportCards.forEach(card => {
+              card.classList.remove('selected');
+              card.querySelector('.transport__options, .food__options').style.color = '';
+          });
+          this.classList.add('selected');
+          const options = this.querySelector('.transport__options, .food__options');
+          if (this.classList.contains('selected')) {
+              options.style.color = 'blue';
+          }
+      });
+  });
+});
 
 
 
