@@ -150,9 +150,6 @@ button {
   width: 40px;
   display: block;
 }
-.hero .selected {
-  color: blue;
-}
 
 .hidden {
   display: none;
@@ -320,6 +317,33 @@ button {
   cursor: pointer;
   border-radius: 20px 20px 0px 0px;
   width: 100%;
+}
+.food .overlay {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+}
+.food .overlay.active {
+  display: block;
+  position: absolute;
+}
+.food .selected-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -90%);
+  z-index: 1;
+  height: 40px;
+  width: 40px;
+  display: block;
+}
+
+.hidden {
+  display: none;
 }
 
 /*# sourceMappingURL=main.css.map */

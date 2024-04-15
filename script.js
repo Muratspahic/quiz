@@ -20,22 +20,22 @@ document.getElementById('selectTransportButton').addEventListener('click', funct
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-  const cardInfos = document.querySelectorAll('.hero__card-info, .transport__card-info');
+  const cardInfos = document.querySelectorAll('.hero__card-info, .transport__card-info, .food__card-info');
 
   cardInfos.forEach(function (cardInfo) {
     const image = cardInfo.querySelector('img');
     const overlay = cardInfo.querySelector('.overlay');
     const selectedIcon = cardInfo.querySelector('.selected-icon');
 
-    const cardInfos = document.querySelectorAll('.hero__card-info, transport__card-info');
+    const cardInfos = document.querySelectorAll('.hero__card-info, transport__card-info, .food__card-info');
 
     cardInfos.forEach(cardInfo => {
       cardInfo.addEventListener('click', () => {
-        document.querySelectorAll('.hero__options, .transport__options').forEach(option => {
+        document.querySelectorAll('.hero__options, .transport__options, .food__options').forEach(option => {
           option.classList.remove('selected');
         });
 
-        cardInfo.querySelector('.hero__options, .transport__options').classList.add('selected');
+        cardInfo.querySelector('.hero__options, .transport__options, .food__options').classList.add('selected');
       });
     });
 
