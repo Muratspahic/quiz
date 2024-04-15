@@ -1,8 +1,27 @@
-.container{
+.container {
   max-width: 1050px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
+* {
+  font-family: 'Ubuntu';
+}
 
+p{
+  size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+}
 
+span{
+  font-weight: 700;
+  size: 16px;
+  line-height: 20px;
+}
+
+button{
+  font-weight: 400;
+  size: 16px;
+  line-height: 26px;
+}

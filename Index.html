@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Quiz</title>
     <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Scope+One&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="start">
@@ -16,90 +19,89 @@
 
                     <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
                 </div>
-                    <button class="button button--start">Start Quiz</button>
+                    <button id="startButton" class="button button--start">Start quiz</button>
             </div>
         </div>
     </div>
 
     <!-- Accommodation -->
 
-    <div class="hero">
+    <div id="accommodationScreen" class="hero hidden">
         <div class="container">
             <h2>Accommodation</h2>
             <div class="hero__wrapper">
                 <div class="hero__card-info">
-                    <img src="https://i0.wp.com/citymagazine.si/wp-content/uploads/2023/02/burano-venice-italy-colorful-buildings-along-can-2022-08-25-19-40-56-utc.jpg?resize=1400%2C933&ssl=1">
+                    <img src="src/scenic view.webp">
+                    <div class="overlay"></div>
                     <div class="hero__options">
                         <span>Scenic view</span>
                         <span>$770</span>
                     </div>
-                    <!-- <div class="overlay"></div> -->
-                    <!-- <img class="selected-icon" src="src/selected icon.webp" alt="Selected"> -->
+                    <img class="selected-icon" src="src/selected icon.webp" alt="Selected">
                 </div>
 
                 <div class="hero__card-info">
-                    <img src="https://happytravelbn.com/images/bookingengine/e/30/368dc2248f4646e962bd18b5641501a9.jpg">
+                    <img src="src/quaint.jpg">
+                    <div class="overlay"></div>
                     <div class="hero__options">
                         <span>Quaint</span>
                         <span>$550</span>
                     </div>
-                    <div class="overlay"></div>
-                    <!-- <img class="selected-icon" src="src/selected icon.webp" alt="Selected"> -->
+                    <img class="selected-icon" src="src/selected icon.webp" alt="Selected">
                 </div>
 
 
                 <div class="hero__card-info">
-                    <img src="https://cdnuploads.aa.com.tr/uploads/Contents/2020/04/02/thumbs_b_c_9be72fa1975723067f5a05d61fb0776f.jpg?v=165004">
+                    <img src="src/pisa.webp">
+                    <div class="overlay"></div>
                     <div class="hero__options">
                         <span>Pisa</span>
                         <span>$400</span>
                     </div>
-                    <div class="overlay"></div>
-                    <!-- <img class="selected-icon" src="src/selected icon.webp" alt="Selected"> -->
+                    <img class="selected-icon" src="src/selected icon.webp" alt="Selected">
                 </div>
             </div>
-            <button class="hero__button-select">Select accommodation 1/3</button>
+            <button id="selectAccommodationButton" class="hero__button-select">Select accommodation 1/3</button>
         </div>
     </div>
 
-        <!-- TRANSPORT -->
-    <div class="transport">
+    <!-- TRANSPORT -->
+    <div id="transportScreen" class="transport hidden">
         <div class="container">
             <h2>Transport</h2>
             <div class="transport__wrapper">
                 <div class="transport__card-info" >
-                    <img src="https://static.mondo.ba/Picture/586164/jpeg/avion.jpeg?ts=2022-09-21T12:25:39">
+                    <img src="src/luxury.jpeg">
+                    <div class="overlay"></div>
                     <div class="transport__options">
                         <span>Luxury</span>
                         <span>$600</span>
                     </div>
-                    <!-- <div class="overlay"></div>
-                    <img class="selected-icon" src="src/selected icon.webp" alt="Selected"> -->
+                    <img class="selected-icon" src="src/selected icon.webp" alt="Selected">
                 </div>
 
                 <div class="transport__card-info">
-                    <img src="https://sarajevo.travel/assets/photos/texts/extra-big/public-city-transport-is-in-function-again-1589529314.jpg">
+                    <img src="src/public-transport.jpg">
+                    <div class="overlay"></div>
                     <div class="transport__options">
                         <span>Public transport</span>
                         <span>$450</span>
                     </div>
-                    <!-- <div class="overlay"></div>
-                    <img class="selected-icon" src="src/selected icon.webp" alt="Selected"> -->
+                    <img class="selected-icon" src="src/selected icon.webp" alt="Selected">
                 </div>
 
 
                 <div class="transport__card-info">
-                    <img src="https://www.topgear.com/sites/default/files/2023/06/AudiRS6Avant%20performance_Dewsilver_matt071.jpg">
-
+                    <img src="src/private-transport.jpg">
+                    <div class="overlay"></div>
                     <div class="transport__options">
                         <span>Private transport</span>
                         <span>$700</span>
                     </div>
-                    <!-- <div class="overlay"></div>
-                    <img class="selected-icon" src="src/selected icon.webp" alt="Selected"> -->
+                    <img class="selected-icon" src="src/selected icon.webp" alt="Selected">
                 </div>
             </div>
-            <button class="transport__button-select">Select accommodation 2/3</button>
+            <button id="selectTransportButton" class="transport__button-select">Select transport 2/3</button>
         </div>
     </div>
 
@@ -107,32 +109,43 @@
 
 
         <!-- FOOD -->
-        <div class="food">
+    <div id="foodScreen" class="food hidden">
+        <div class="container">
             <h2>Food</h2>
-            <div class="food__card-info">
-                <img src="https://public.flourish.studio/uploads/1216465/948d68c7-6560-4cec-9d80-2193d97fb16a.jpg">
-                <button class="food__button">Traditional<span class="food__price">$200</span></button>
-                <div class="overlay"></div>
-                <!-- <img class="selected-icon" src="src/selected icon.webp" alt="Selected"> -->
-            </div>
+            <div class="food__wrapper">
+                    <div class="food__card-info">
+                        <img src="src/traditional.jpg">
+                        <div class="overlay"></div>
+                        <div class="food__options">
+                            <span>Traditional</span>
+                            <span>$200</span>
+                        </div>
+                        <img class="selected-icon" src="src/selected icon.webp" alt="Selected">
+                    </div>
 
-            <div class="food__card-info">
-                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/26/5b/f5/f9/apetit-restoran.jpg?w=600&h=-1&s=1">
-                <button class="food__button">Restaurant food<span class="food__price">$600</span></button>
-                <div class="overlay"></div>
-                <!-- <img class="selected-icon" src="src/selected icon.webp" alt="Selected"> -->
-            </div>
+                <div class="food__card-info">
+                    <img src="src/restaurant.jpg">
+                    <div class="overlay"></div>
+                    <div class="food__options">
+                        <span>Restaurant food</span>
+                        <span>$600</span>
+                    </div>
+                    <img class="selected-icon" src="src/selected icon.webp" alt="Selected">
+                </div>
 
 
-            <div class="food__card-info">
-                <img src="https://image.dnevnik.hr/media/images/920x695/Oct2022/62396214-kebab-turska-istanbul.jpg">
-                <button class="food__button">Street food<span class="food__price">$800</span></button>
-                <div class="overlay"></div>
-                <!-- <img class="selected-icon" src="src/selected icon.webp" alt="Selected"> -->
+                <div class="food__card-info">
+                    <img src="src/street-food.jpg">
+                    <div class="overlay"></div>
+                    <div class="food__options">
+                        <span>Street food</span>
+                        <span>$800</span>
+                    </div>
+                    <img class="selected-icon" src="src/selected icon.webp" alt="Selected">
+                </div>
             </div>
-            <button class="food__button-select">Select accommodation 3/3</button>
+            <button id="selectFoodButton" class="food__button-select">Select food 3/3</button>
         </div>
-
     </div>
     <script src="script.js"></script>
 </body>
