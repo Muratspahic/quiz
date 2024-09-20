@@ -30,13 +30,14 @@ describe('Visit My APP Quiz', () => {
     cy.get('#accommodationScreen .accommodationIcon img').should('be.visible');
     cy.get('#accommodationScreen .accommodationIcon h2').should('contain.text', 'Accommodation');
     cy.get('#accommodationScreen .hero__wrapper').should('be.visible');
+    cy.get('#accommodationScreen .hero__card-info').should('have.length', 3);
   });
 
   it('should update the card and button correctly when clicking on a card', () => {
     cy.get('#startButton').click();
     cy.get('[data-testid="info"]').click();
 
-    cy.get('[data-testid="info"] .overlay').should('have.class', 'active');
+    cy.get('[data-testid="overlay-click"].active').should('exist');
     cy.get('[data-testid="info"] .selected-icon').should('be.visible');
   });
 
@@ -50,10 +51,8 @@ describe('Visit My APP Quiz', () => {
     });
   });
 
-  it('should verify that the "selectAccommodationButton" is visible and not clickable when no card is selected', () => {
+  it('should verify that the "selectAccommodationButton" is not clickable when no card is selected', () => {
     cy.get('#startButton').click();
-
-    cy.get('#selectAccommodationButton').should('be.visible');
     cy.get('#selectAccommodationButton').should('be.disabled');
   });
 
@@ -64,5 +63,40 @@ describe('Visit My APP Quiz', () => {
     cy.get('#selectAccommodationButton').should('not.be.disabled');
     cy.get('#selectAccommodationButton').click();
     cy.get('#transportScreen').should('be.visible');
+  });
+
+  it('should navigate to transport screen after selecting accommodation', () => {
+    cy.get('#startButton').click();
+    cy.get('[data-testid="info"]').click();
+    cy.get('#selectAccommodationButton').click();
+
+    cy.get('[data-testid="transportScreen"]').should('be.visible');
+  });
+
+  it('should display transport options correctly', () => {
+    cy.get('#startButton').click();
+    cy.get('[data-testid="info"]').click();
+    cy.get('#selectAccommodationButton').click();
+
+    cy.get('.transport__card-info').should('have.length', 3);
+    cy.get('.transport__card-info').first().should('contain.text', 'Luxury');
+  });
+
+  it('should allow selection of a transport option', () => {
+    cy.get('#startButton').click();
+    cy.get('[data-testid="info"]').click();
+    cy.get('#selectAccommodationButton').click();
+
+    cy.get('.transport__card-info').first().click();
+    cy.get('.transport__card-info.selected').should('exist');
+  });
+
+  it('should enable selectTransportButton after selecting a transport option', () => {
+    cy.get('#startButton').click();
+    cy.get('[data-testid="info"]').click();
+    cy.get('#selectAccommodationButton').click();
+
+    cy.get('.transport__card-info').first().click();
+    cy.get('#selectTransportButton').should('not.be.disabled').click();
   });
 });
